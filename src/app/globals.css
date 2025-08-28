@@ -5,14 +5,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --color-lumina-50: #e0f7ff;
+  --color-lumina-50: #e4f7ee;
   --color-lumina-100: #b8ecff;
   --color-lumina-200: #8adfff;
   --color-lumina-300: #5cd2ff;
   --color-lumina-400: #2ec5ff;
   --color-lumina-500: #00b7f5;
-  --color-lumina-600: #02552A;
-  --color-lumina-700: #0086ad;
+  --color-lumina-600: #02552a;
+  --color-lumina-700: #67b28b;
   --color-lumina-800: #006683;
   --color-lumina-900: #00455a;
 }
@@ -65,7 +65,7 @@
   * {
     border-color: hsl(var(--border));
   }
-  
+
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
@@ -75,13 +75,21 @@
 @layer components {
   /* Accordion animations */
   @keyframes accordion-down {
-    from { height: 0; }
-    to { height: var(--radix-accordion-content-height); }
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
   }
 
   @keyframes accordion-up {
-    from { height: var(--radix-accordion-content-height); }
-    to { height: 0; }
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
 
   .animate-accordion-down {
@@ -92,8 +100,6 @@
     animation: accordion-up 0.2s ease-out;
   }
 }
-
-
 
 /* Optional: container config using utility */
 .container {
