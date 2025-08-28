@@ -1,21 +1,22 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { Toaster } from "sonner"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Toaster } from "sonner";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LUMINA - Lung Multimodal Integrated Network Assistant",
-  description: "Advanced lung cancer classification using 3D DenseNet and logistic regression",
-    generator: 'v0.dev'
-}
+  title: "iBAGA - Intelligent Broncho-Anatomical and Guided Assessment",
+  description:
+    "Advanced lung cancer classification using 3D DenseNet and logistic regression",
+  generator: "v0.dev",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -24,5 +25,5 @@ export default function RootLayout({
         <Toaster />
       </body>
     </html>
-  )
+  );
 }
